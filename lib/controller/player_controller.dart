@@ -28,7 +28,41 @@ class MyPlayerControllerState extends State<MyPlayerController> {
 
   @override
   Widget build(BuildContext context) {
-    return PlayerView(song: song);
+    return PlayerView(
+      song: song,
+      onRepeatPressed: onRepeatPressed,
+      onShufflePressed: onShufflePressed,
+      onPlayPausePressed: onPlayPausePressed,
+      onforwardPressed: onforwardPressed,
+      onRewindPressed: onRewindPressed,
+    );
+  }
+
+  Function onRepeatPressed() {
+    return () {
+
+    };
+
+  }
+
+
+  Function onShufflePressed() {
+    return () {
+
+    };
+
+  }
+
+  onPlayPausePressed() {
+
+  }
+
+  onforwardPressed() {
+
+  }
+
+  onRewindPressed() {
+
   }
 
 }
