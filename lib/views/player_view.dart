@@ -15,6 +15,9 @@ class PlayerView extends StatelessWidget{
   final Duration maxDuration;
   final Duration position;
 
+  final bool shuffle;
+  final bool repeat;
+
   final Function() onRepeatPressed;
   final Function() onShufflePressed;
   final Function() onPlayPausePressed;
@@ -33,7 +36,9 @@ class PlayerView extends StatelessWidget{
     required this.onRewindPressed,
     required this.maxDuration,
     required this.position,
-    required this.onPositionChanged
+    required this.onPositionChanged,
+    required this.shuffle,
+    required this.repeat,
   });
 
   @override
@@ -128,7 +133,16 @@ class PlayerView extends StatelessWidget{
 
                   Column(
                     children: [
-                      Row(),
+                      Row(
+                        mainAxisSize: MainAxisSize.max,
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(0.toString(), style: GoogleFonts.signika(fontSize: 18, color: Colors.red)),
+                          Text(position.inSeconds.toString(), style: GoogleFonts.signika(fontSize: 18, color: Colors.red)),
+                          Text(maxDuration.inSeconds.toString(), style: GoogleFonts.signika(fontSize: 18, color: Colors.red)),
+
+                        ],
+                      ),
                       Slider(
                         min: 0,
                         max: maxDuration.inSeconds.toDouble(),

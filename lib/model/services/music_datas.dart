@@ -12,7 +12,7 @@ class MusicDatas {
 
 
   //Music
-  Song get mozart => Song(id: 1, title: "Symphonie numéro 40", album: "Best Of", path: "assets/songs/allegro.mp3", mediaType: MediaType.inApp, thumb: "https://www.musicologie.org/Biographies/m/mozart.jpg", genre: Genre.classic, artist: amadeus);
+  Song get mozart => Song(id: 1, title: "Symphonie numéro 40", album: "Best Of", path: "songs/allegro.mp3", mediaType: MediaType.inApp, thumb: "https://www.musicologie.org/Biographies/m/mozart.jpg", genre: Genre.classic, artist: amadeus);
 
   List<Song> tuPac() {
     Genre genre = Genre.rap;
